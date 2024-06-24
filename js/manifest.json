@@ -1,7 +1,7 @@
 {
-    "name": "Minha Aplicação PWA",
-    "short_name": "MinhaPWA",
-    "start_url": "/index.html",
+    "name": "Sismorcego",
+    "short_name": "SMCG",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#317EFB",
