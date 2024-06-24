@@ -50,4 +50,14 @@ header .theme .circle {
     border-radius: 50%;
     position: absolute;
 }
+header img:nth-child(1){
+    display: none;
+}
+@media (max-width: 700px) {
+    header img:nth-child(1){
+        display: block;
+    }header img:nth-child(2){
+        display: none;
+    }
+}
 
