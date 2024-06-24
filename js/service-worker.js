@@ -3,14 +3,14 @@ const urlsToCache = [
     '/',
     'index.html',
     'styles.css',
-    'Logo_tema_claro80px.png',
-    'Logo_tema_escuro80px.png',
-    'Logo_tema_claro144px.png',
-    'Logo_tema_escuro144px.png',
-    'Logo_tema_claro192px.png',
-    'Logo_tema_escuro192px.png',
-    'Logo_tema_claro512px.png',
-    'Logo_tema_escuro512px.png'
+    '/src/Logo_tema_claro80px.png',
+    '/src/Logo_tema_escuro80px.png',
+    '/src/Logo_tema_claro144px.png',
+    '/src/Logo_tema_escuro144px.png',
+    '/src/Logo_tema_claro192px.png',
+    '/src/Logo_tema_escuro192px.png',
+    '/src/Logo_tema_claro512px.png',
+    '/src/Logo_tema_escuro512px.png'
     // Adicione mais arquivos que você deseja armazenar em cache aqui
 ];
 
