@@ -45,7 +45,7 @@ ul {
     max-width: 900px;
     margin: auto;
     padding: 0 15px;
-    overflow:hidden
+    overflow: hidden;
 }
 
 main {
@@ -53,6 +53,7 @@ main {
     padding: 0 15px;
     display: flex;
 }
+
 
 
 @media (max-width: 700px) {

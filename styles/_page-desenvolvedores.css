@@ -1,3 +1,11 @@
 #desenvolvedores {
     margin-top: 18rem;
+    overflow-y: auto; /* Ativa a rolagem vertical quando necessário */
+    scrollbar-width: none; /* Oculta a barra de rolagem do Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem do Internet Explorer e Edge */
 }
+    
+#desenvolvedores ::-webkit-scrollbar {
+        display: none; /* Oculta a barra de rolagem do WebKit (Chrome, Safari, etc.) */
+}
+   

@@ -14,7 +14,7 @@
 
 <body class="container">
 
-    <!--Cabaçalho-->
+    <!--Cabeçalho-->
     <div class="content-header">
         <header>
             <div class="img">
@@ -29,25 +29,106 @@
     <!--Conteúdo Principal-->
     <main>
         <section id="perguntas">
-            <h1>perguntas</h1>
-            <!--<form class="Enviar-foto" action="/upload" method="post" enctype="multipart/form-data">
-                <label for="imageUpload">Escolha uma imagem:</label>
-                <input type="file" id="imageUpload" name="image" accept="image/*" required>
-                <button type="submit">Enviar</button>
-              </form>-->
+            <h1>Perguntas</h1>
+            <form>
+                <label for="acm-name">Nome do ACM:</label>
+                <input type="text" id="acm-name" name="acm-name" required>
+                
+                <label for="register-date">Data do registro:</label>
+                <input type="date" id="register-date" name="register-date" required>
+                
+                <label for="aggressor-name">Nome do agredido:</label>
+                <input type="text" id="aggressor-name" name="aggressor-name" required>
+                
+                <label for="gender">Sexo:</label>
+                <div id="gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Masculino</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Feminino</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Outros</label>
+                </div>
+                
+                <button type="button" id="geolocation-btn">Geolocalização (latitude e longitude)</button>
+                <div id="map"></div>
+                
+                <label for="city">Município da agressão:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <label for="address">Endereço da agressão:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="location">Local da agressão:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <button type="button" id="camera-btn">Abrir Câmera</button>
+                <button type="button" id="gallery-btn">Abrir Galeria</button>
+                
+                <label for="antirabies-treatment">Recebeu tratamento antirrábico:</label>
+                <div id="antirabies-treatment">
+                    <input type="radio" id="yes" name="antirabies-treatment" value="yes">
+                    <label for="yes">Sim</label>
+                    <input type="radio" id="no" name="antirabies-treatment" value="no">
+                    <label for="no">Não</label>
+                </div>
+                
+                <label for="animal">Animal agredido no local:</label><br>
+                <input type="checkbox" id="dog" name="animal" value="dog">
+                <label for="dog">Cachorro</label><br>
+                <input type="checkbox" id="cat" name="animal" value="cat">
+                <label for="cat">Gato</label><br>
+                <input type="checkbox" id="bat" name="animal" value="bat">
+                <label for="bat">Morcego</label><br>
+                <input type="checkbox" id="rat" name="animal" value="rat">
+                <label for="rat">Rato</label><br>
+                <input type="checkbox" id="other-animal" name="animal" value="other">
+                <label for="other-animal">Outro</label><br>
+                
+                <label for="light-source">Qual fonte de luz:</label><br>
+                <input type="checkbox" id="natural" name="light-source" value="natural">
+                <label for="natural">Natural</label><br>
+                <input type="checkbox" id="artificial" name="light-source" value="artificial">
+                <label for="artificial">Artificial</label><br>
+                <input type="checkbox" id="both-light" name="light-source" value="both">
+                <label for="both-light">Ambas</label><br>
+                
+                <label for="circumstance">Circunstância:</label><br>
+                <input type="checkbox" id="leisure" name="circumstance" value="leisure">
+                <label for="leisure">Em lazer</label><br>
+                <input type="checkbox" id="hunting" name="circumstance" value="hunting">
+                <label for="hunting">Caçando</label><br>
+                <input type="checkbox" id="fishing" name="circumstance" value="fishing">
+                <label for="fishing">Pescando</label><br>
+                </select>
+            </form>
         </section>
     </main>
 
     <!--Rodapé-->
-        <footer>
-            <button><a href="Inicial.html"><i class="fa-solid fa-house-chimney"></i></a></button>
-            <button><a href="pesquisar.html"><i class="fa-solid fa-magnifying-glass"></i></a></button>
-            <button><a href="Perguntas.html"><i class="fa-solid fa-file-circle-plus"></i></a></button>
-            <button><a href="configuracoes.html"><i class="fa-solid fa-gear"></i></a></button>
-            <button><a href="desenvolvedores.html"><i class="fa-solid fa-users"></i></a></button>
-        </footer>
+    <footer>
+        <button><a href="Inicial.html"><i class="fa-solid fa-house-chimney"></i></a></button>
+        <button><a href="pesquisar.html"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+        <button><a href="Perguntas.html"><i class="fa-solid fa-file-circle-plus"></i></a></button>
+        <button><a href="configuracoes.html"><i class="fa-solid fa-gear"></i></a></button>
+        <button><a href="desenvolvedores.html"><i class="fa-solid fa-users"></i></a></button>
+    </footer>
 
     <script src="js/app.js"></script>
+    <script>
+        // Geolocalização
+        document.getElementById('geolocation-btn').addEventListener('click', () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    document.getElementById('map').innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
+                    // Aqui você pode adicionar o código para mostrar o mapa
+                });
+            } else {
+                alert("Geolocalização não é suportada pelo navegador.");
+            }
+        });
+    </script>
 </body>
-
 </html>

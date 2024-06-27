@@ -10,7 +10,9 @@ const urlsToCache = [
     '/src/Logo_tema_claro192px.png',
     '/src/Logo_tema_escuro192px.png',
     '/src/Logo_tema_claro512px.png',
-    '/src/Logo_tema_escuro512px.png'
+    '/src/Logo_tema_escuro512px.png',
+    '/src/programacao.jpg',
+    'reuniao.png'
     // Adicione mais arquivos que você deseja armazenar em cache aqui
 ];
 
