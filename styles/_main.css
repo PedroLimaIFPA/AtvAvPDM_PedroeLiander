@@ -1,12 +1,2 @@
-body {
-    display: flex;
-    align-items: center;
-}
 
-main {
-    width: 900px;
-    height: 100vh;
-    padding: 0 15px;
-    display: flex;
-}
 
