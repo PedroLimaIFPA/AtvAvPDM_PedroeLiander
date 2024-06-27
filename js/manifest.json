@@ -7,6 +7,12 @@
     "theme_color": "#317EFB",
     "icons": [
         {
+            "src": "/src/Logo_tema_escuro80px.png",
+            "sizes": "10x10",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
             "src": "/src/Logo_tema_claro80px.png",
             "sizes": "80x80",
             "type": "image/png",

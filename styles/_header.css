@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    max-width: 60rem;
+    max-width: 600px;
     height: 10rem;
     display: flex;
     justify-content: space-between;
@@ -14,8 +14,13 @@ header {
     padding: 0 15px;
 }
 
-header i {
+header .logout{
     font-size: 2.5rem;
+    display: none;
+}
+
+header img {
+    display: none;
 }
 
 header .theme {
@@ -52,12 +57,5 @@ header .theme .circle {
 }
 header img:nth-child(1){
     display: none;
-}
-@media (max-width: 700px) {
-    header img:nth-child(1){
-        display: block;
-    }header img:nth-child(2){
-        display: none;
-    }
 }
 

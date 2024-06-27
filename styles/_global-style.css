@@ -1,16 +1,21 @@
 @import url('_header.css');
 @import url('_footer.css');
+@import url('_main.css');
+@import url('_page-inicial.css');
+@import url('_page-login.css');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
     --purple: #0b1024;
     --black: #000;
     --white: #fff;
+    --violet: #c946c9;
 }
 
 html {
