@@ -33,6 +33,7 @@ header .theme {
     position: relative;
     border: 1px solid var(--white);
     cursor: pointer;
+    padding: 2px;
 }
 
 header .theme i {
@@ -49,13 +50,18 @@ header .theme i:nth-child(3) {
 }
 
 header .theme .circle {
-    height: 2.5rem;
+    height: 2.4rem;
     width: 2.5rem;
-    background-color: black;
+    background-color: var(--white);
     border-radius: 50%;
     position: absolute;
 }
+
 header img:nth-child(1){
     display: none;
+}
+
+.theme-active {
+    right: 2px;
 }
 
