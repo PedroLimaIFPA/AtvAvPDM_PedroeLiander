@@ -1,41 +1,49 @@
-const CACHE_NAME = 'my-pwa-cache-v1';
-const urlsToCache = [
-    '/',
-    'index.html',
-    'styles.css',
-    '/src/Logo_tema_claro80px.png',
-    '/src/Logo_tema_escuro80px.png',
-    '/src/Logo_tema_claro144px.png',
-    '/src/Logo_tema_escuro144px.png',
-    '/src/Logo_tema_claro192px.png',
-    '/src/Logo_tema_escuro192px.png',
-    '/src/Logo_tema_claro512px.png',
-    '/src/Logo_tema_escuro512px.png',
-    '/src/programacao.jpg',
-    'reuniao.png'
-    // Adicione mais arquivos que você deseja armazenar em cache aqui
-];
-
-self.addEventListener('install', function(event) {
-    // Perform install steps
+self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(function(cache) {
-                console.log('Opened cache');
-                return cache.addAll(urlsToCache);
-            })
+      caches.open('my-pwa-cache-v1').then((cache) => {
+        return cache.addAll([
+          '/',
+          '/inicial.html',
+          '/cadastro.html',
+          '/configuracoes.html',
+          '/desenvolvedores.html',
+          '/login.html',
+          '/perguntas.html',
+          '/pesquisar.html',
+          '/recuperasenha.html',
+          '/registros.html',
+          '/styles/_fotter.css',
+          '/styles/_global-style.css',
+          '/styles/_header.css',
+          '/styles/_main.css',
+          '/styles/_page-configuracoes.css',
+          '/styles/_page-inicial.css',
+          '/styles/_page-login.css',
+          '/styles/_page-perguntas.css',
+          '/styles/_page-pesquisar.css',
+          '/js/app.js',
+          '/src/Liander.png',
+          '/src/Logo_tema_claro08px.png',
+          '/src/Logo_tema_escuro08px.png',
+          '/src/Logo_tema_claro144px.png',
+          '/src/Logo_tema_escuro144px.png',
+          '/src/Logo_tema_claro192px.png',
+          '/src/Logo_tema_escuro192px.png',
+          '/src/Logo_tema_claro512px.png',
+          '/src/Logo_tema_escuro512px.png',
+          '/src/Pedro.png',
+          '/src/programação.jpg',
+          '/src/reunião.png'
+        ]);
+      })
     );
-});
-
-self.addEventListener('fetch', function(event) {
+  });
+  
+  self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request)
-            .then(function(response) {
-                // Cache hit - return response
-                if (response) {
-                    return response;
-                }
-                return fetch(event.request);
-            })
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
+      })
     );
-});
+  });
+  
